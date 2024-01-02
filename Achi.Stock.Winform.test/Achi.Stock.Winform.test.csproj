@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA10EA6D-6D64-46F6-ADA3-9A83E189A660}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Achi.Stock.Winform.test</RootNamespace>
+    <AssemblyName>Achi.Stock.Winform.test</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.0.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.0.0\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=7.0.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.0.2\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAccountTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccountTotal.Designer.cs">
+      <DependentUpon>FormAccountTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminLoginChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminLoginChoose.Designer.cs">
+      <DependentUpon>FormAdminLoginChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseStock.Designer.cs">
+      <DependentUpon>BaseStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseTrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseTrade.Designer.cs">
+      <DependentUpon>BaseTrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaseAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaseAccount.Designer.cs">
+      <DependentUpon>FormBaseAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaseBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaseBack.Designer.cs">
+      <DependentUpon>FormBaseBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormForgetPassword.Designer.cs">
+      <DependentUpon>FormForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageMember.Designer.cs">
+      <DependentUpon>FormManageMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageMemberPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageMemberPermission.Designer.cs">
+      <DependentUpon>FormManageMemberPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageStock.Designer.cs">
+      <DependentUpon>FormManageStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberBasic.Designer.cs">
+      <DependentUpon>FormMemberBasic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberUpdate.Designer.cs">
+      <DependentUpon>FormMemberUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberUpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberUpdatePassword.Designer.cs">
+      <DependentUpon>FormMemberUpdatePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPasswordConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPasswordConfirm.Designer.cs">
+      <DependentUpon>FormPasswordConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRanking.Designer.cs">
+      <DependentUpon>FormRanking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTradeDataSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTradeDataSearch.Designer.cs">
+      <DependentUpon>FormTradeDataSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUseApiGetStockPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUseApiGetStockPrice.Designer.cs">
+      <DependentUpon>FormUseApiGetStockPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaseMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaseMember.Designer.cs">
+      <DependentUpon>FormBaseMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTradeIntrust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTradeIntrust.Designer.cs">
+      <DependentUpon>FormTradeIntrust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStock.Designer.cs">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStockSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStockSearch.Designer.cs">
+      <DependentUpon>FormStockSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTAIEX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTAIEX.Designer.cs">
+      <DependentUpon>FormTAIEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrade.Designer.cs">
+      <DependentUpon>FormTrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTradeRightNow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTradeRightNow.Designer.cs">
+      <DependentUpon>FormTradeRightNow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUseExcelAddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUseExcelAddStock.Designer.cs">
+      <DependentUpon>FormUseExcelAddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUseGetDailyTAIEX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUseGetDailyTAIEX.Designer.cs">
+      <DependentUpon>FormUseGetDailyTAIEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dtos\MemberAccountMoneyDto.cs" />
+    <Compile Include="Models\Dtos\MemberAccountStockDto.cs" />
+    <Compile Include="Models\Dtos\MemberDto.cs" />
+    <Compile Include="Models\Dtos\MemberLoginDataDto.cs" />
+    <Compile Include="Models\Dtos\StockCompanyDto.cs" />
+    <Compile Include="Models\Dtos\StockDailyPriceDto.cs" />
+    <Compile Include="Models\Dtos\StockDailyTAIEXDto.cs" />
+    <Compile Include="Models\Dtos\StockMarketDto.cs" />
+    <Compile Include="Models\Dtos\TradeDataDto.cs" />
+    <Compile Include="Models\Dtos\TradeDateIntrustDto.cs" />
+    <Compile Include="Models\Dtos\TradeStateDto.cs" />
+    <Compile Include="Models\Dtos\TradeStateIntrustDto.cs" />
+    <Compile Include="Models\EFModels\AppDBContext.cs" />
+    <Compile Include="Models\EFModels\Member.cs" />
+    <Compile Include="Models\EFModels\MemberAccountMoney.cs" />
+    <Compile Include="Models\EFModels\MemberAccountStock.cs" />
+    <Compile Include="Models\EFModels\MemberLoginData.cs" />
+    <Compile Include="Models\EFModels\StockCompany.cs" />
+    <Compile Include="Models\EFModels\StockDailyPrice.cs" />
+    <Compile Include="Models\EFModels\StockDailyTAIEX.cs" />
+    <Compile Include="Models\EFModels\StockMarket.cs" />
+    <Compile Include="Models\EFModels\sysdiagram.cs" />
+    <Compile Include="Models\EFModels\TradeData.cs" />
+    <Compile Include="Models\EFModels\TradeDateIntrust.cs" />
+    <Compile Include="Models\EFModels\TradeState.cs" />
+    <Compile Include="Models\EFModels\TradeStateIntrust.cs" />
+    <Compile Include="Models\Interfaces\IMemberAccountMoneyRepository.cs" />
+    <Compile Include="Models\Interfaces\IMemberAccountStockRepository.cs" />
+    <Compile Include="Models\Interfaces\IMemberLoginDataRopository.cs" />
+    <Compile Include="Models\Interfaces\IMemberRepository.cs" />
+    <Compile Include="Models\Interfaces\IStockCompanyRepository.cs" />
+    <Compile Include="Models\Interfaces\IStockDailyPriceRepository.cs" />
+    <Compile Include="Models\Interfaces\IStockDailyTAIEXRepository.cs" />
+    <Compile Include="Models\Interfaces\ITradeDataRepository.cs" />
+    <Compile Include="Models\Interfaces\ITradeDateIntrustRepository.cs" />
+    <Compile Include="Models\Repositories\MemberAccountMoneyEFRepository.cs" />
+    <Compile Include="Models\Repositories\MemberAccountStockEFRepository.cs" />
+    <Compile Include="Models\Repositories\MemberEFRepository.cs" />
+    <Compile Include="Models\Repositories\MemberLoginDataEFRopository.cs" />
+    <Compile Include="Models\Repositories\StockCompanyEFRepository.cs" />
+    <Compile Include="Models\Repositories\StockDailyPriceEFRepository.cs" />
+    <Compile Include="Models\Repositories\StockDailyTAIEXEFRepository.cs" />
+    <Compile Include="Models\Repositories\TradeDataEFRepository.cs" />
+    <Compile Include="Models\Repositories\TradeDataIntrustEFRepository.cs" />
+    <Compile Include="Models\Services\MemberAccountMoneyService.cs" />
+    <Compile Include="Models\Services\MemberAccountStockService.cs" />
+    <Compile Include="Models\Services\MemberLoginDataService.cs" />
+    <Compile Include="Models\Services\MemberService.cs" />
+    <Compile Include="Models\Services\StockCompanyService.cs" />
+    <Compile Include="Models\Services\StockDailyPriceService.cs" />
+    <Compile Include="Models\Services\StockDailyTAIEXService.cs" />
+    <Compile Include="Models\Services\TradeDataIntrustService.cs" />
+    <Compile Include="Models\Services\TradeDataService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetNewPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetNewPassword.Designer.cs">
+      <DependentUpon>FormSetNewPassword.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAccountTotal.resx">
+      <DependentUpon>FormAccountTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminLoginChoose.resx">
+      <DependentUpon>FormAdminLoginChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseStock.resx">
+      <DependentUpon>BaseStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseTrade.resx">
+      <DependentUpon>BaseTrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaseAccount.resx">
+      <DependentUpon>FormBaseAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaseBack.resx">
+      <DependentUpon>FormBaseBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormForgetPassword.resx">
+      <DependentUpon>FormForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageMember.resx">
+      <DependentUpon>FormManageMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageMemberPermission.resx">
+      <DependentUpon>FormManageMemberPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageStock.resx">
+      <DependentUpon>FormManageStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberBasic.resx">
+      <DependentUpon>FormMemberBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberUpdate.resx">
+      <DependentUpon>FormMemberUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberUpdatePassword.resx">
+      <DependentUpon>FormMemberUpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPasswordConfirm.resx">
+      <DependentUpon>FormPasswordConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRanking.resx">
+      <DependentUpon>FormRanking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTradeDataSearch.resx">
+      <DependentUpon>FormTradeDataSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUseApiGetStockPrice.resx">
+      <DependentUpon>FormUseApiGetStockPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaseMember.resx">
+      <DependentUpon>FormBaseMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTradeIntrust.resx">
+      <DependentUpon>FormTradeIntrust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStock.resx">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStockSearch.resx">
+      <DependentUpon>FormStockSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTAIEX.resx">
+      <DependentUpon>FormTAIEX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrade.resx">
+      <DependentUpon>FormTrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTradeRightNow.resx">
+      <DependentUpon>FormTradeRightNow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUseExcelAddStock.resx">
+      <DependentUpon>FormUseExcelAddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUseGetDailyTAIEX.resx">
+      <DependentUpon>FormUseGetDailyTAIEX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetNewPassword.resx">
+      <DependentUpon>FormSetNewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Achi.Stock.Core\Achi.Stock.Core.csproj">
+      <Project>{bbc5e6e5-dd78-431d-a173-195ea065bdf3}</Project>
+      <Name>Achi.Stock.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
